@@ -1,3 +1,7 @@
+<?php
+  require "../../connect.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -93,36 +97,19 @@
 
       <!-- item container -->
       <div class="item-container">
-        <div class="item" onclick="GoToItemDetail()">
-          <img src="../../images/shoeimg.jpg" alt="shoe" />
-          <p class="shoe-title">Nike Dunk Retro Low</p>
-          <p class="shoe-price">3,000,000 VNĐ</p>
-        </div>
-        <div class="item">
-          <img src="../../images/shoeimg.jpg" alt="shoe" />
-          <p class="shoe-title">Nike Dunk Retro Low</p>
-          <p class="shoe-price">3,000,000 VNĐ</p>
-        </div>
-        <div class="item">
-          <img src="../../images/shoeimg.jpg" alt="shoe" />
-          <p class="shoe-title">Nike Dunk Retro Low</p>
-          <p class="shoe-price">3,000,000 VNĐ</p>
-        </div>
-        <div class="item">
-          <img src="../../images/shoeimg.jpg" alt="shoe" />
-          <p class="shoe-title">Nike Dunk Retro Low</p>
-          <p class="shoe-price">3,000,000 VNĐ</p>
-        </div>
-        <div class="item">
-          <img src="../../images/shoeimg.jpg" alt="shoe" />
-          <p class="shoe-title">Nike Dunk Retro Low</p>
-          <p class="shoe-price">3,000,000 VNĐ</p>
-        </div>
-        <div class="item">
-          <img src="../../images/shoeimg.jpg" alt="shoe" />
-          <p class="shoe-title">Nike Dunk Retro Low</p>
-          <p class="shoe-price">3,000,000 VNĐ</p>
-        </div>
+          <?php
+              $query = mysqli_query($conn, "SELECT * FROM giay");
+              while ($rowData=mysqli_fetch_assoc($query)) {
+                  $arrImg = explode("|", $rowData['HINHANH']);
+          ?>
+              <div style="height: 290px" class="item" onclick="GoToItemDetail('<?php echo $conn->real_escape_string($rowData['MAGIAY'])?>')">
+                <img style="width: 214px" src="../../images/<?php echo $arrImg[0]?>" alt="shoe"/>
+                <p style="width: 214px;" class="shoe-title"><?php echo $rowData['MAGIAY']?></p>
+                <p class="shoe-price"><?php echo number_format($rowData['GIA'])?> VNĐ</p>
+              </div>
+          <?php
+              }
+          ?>
       </div>
     </div>
   </body>

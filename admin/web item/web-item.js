@@ -1,5 +1,5 @@
-function GoToItemDetail() {
-    window.location.href = './item-view.php'
+function GoToItemDetail(id) {
+    window.location.href = './item-view.php?id=' + id;
 }
 
 function handleBrand(element) {

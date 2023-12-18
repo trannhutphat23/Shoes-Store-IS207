@@ -52,13 +52,13 @@
         </div>
         <ol class="hidden">
           <!-- Tất cả -->
-          <li onclick="routerPage('./web item/all-item.html')">
+          <li onclick="routerPage('./web item/all-item.php')">
             <i class="fa-solid fa-plus"></i>
             <p>Tất cả</p>
           </li>
 
           <!-- Thêm mới -->
-          <li onclick="routerPage('./web item/add-item.html')">
+          <li onclick="routerPage('./web item/add-item.php')">
             <i class="fa-solid fa-plus"></i>
             <p>Thêm mới</p>
           </li>
