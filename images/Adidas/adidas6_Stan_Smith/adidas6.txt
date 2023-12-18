@@ -1,0 +1,21 @@
+name: Adidas Stan Smith
+
+color: trắng
+
+category: originals
+
+price: 3.700.000đ
+
+info:
+ĐÔI GIÀY RETRO PHIÊN BẢN MỚI, CÓ NGUỒN GỐC TỰ NHIÊN.
+Thể hiện tầm ảnh hưởng về thể thao, thời trang và đường phố suốt 50 năm qua và hơn thế nữa, giày adidas Stan Smith khoe trọn thiết kế đa năng với thân giày denim làm từ cotton hữu cơ. Viền gót giày và lưỡi gà có các chi tiết bằng da tạo điểm nhấn tương phản tinh tế, đồng thời gợi nhớ thiết kế quần denim classic. Kiểu dáng thanh thoát và phối màu tinh tế cho phép bạn thỏa sức phối đồ.
+
+Đôi giày này làm từ chất liệu tự nhiên và có thể tái tạo, là một phần trong hành trình của chúng tôi hướng tới chấm dứt sử dụng tài nguyên hữu hạn và góp phần loại bỏ rác thải nhựa.
+
+
+details: Dáng regular fit
+Có dây giày
+Thân giày bằng vải denim
+Lớp lót bằng vải dệt
+Đế ngoài bằng cao su
+Màu sản phẩm: Core White / Magic Beige / Off White

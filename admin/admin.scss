@@ -1,0 +1,113 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  border-right: 2px solid #111;
+  height: 100vh;
+  width: 15%;
+  padding-right: 10px;
+  padding-left: 10px;
+  .navbar-head {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav {
+    width: 100%;
+    height: 50%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    li {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+      .hidden {
+        display: none;
+      }
+      .tag-title {
+        border: 1px solid #9e9ea0;
+        min-height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.2s;
+        p {
+          padding: 0;
+          font-size: 18px;
+          font-weight: 500;
+          width: 60%;
+          text-align: center;
+        }
+        i {
+          font-size: 20px;
+          width: 15%;
+          text-align: center;
+        }
+        &:hover {
+          background-color: #ebe9e9;
+        }
+      }
+      ol {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          height: 30px;
+          transition: 0.2s;
+          p {
+            padding: 0;
+            font-size: 16px;
+            font-weight: 500;
+            width: 70%;
+          }
+          i {
+            font-size: 15px;
+            width: 15%;
+            text-align: center;
+          }
+          &:hover {
+            background-color: #9e9ea0;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  background-color: #f9f9f9;
+
+  iframe {
+    display: block;
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+}

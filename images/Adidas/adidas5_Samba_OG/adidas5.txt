@@ -1,0 +1,16 @@
+name: Adidas Samba OG
+
+category: originals
+
+color: đen
+
+price: 2.700.000đ
+
+info:ĐÔI GIÀY TRAINER VINTAGE MƯỢN CẢM HỨNG TỪ HÀNH TRÌNH DU LỊCH CHÂU ÂU BẰNG XE LỬA KHÔNG GIỚI HẠN.
+Giày adidas Samba đã thể hiện chất 3 Sọc qua bao thập kỷ. Thiết kế classic ấy đã vượt xa khỏi sân bóng đá để lan tỏa sức ảnh hưởng tới vô số nhánh văn hóa và tín đồ thời trang tiên phong. Phiên bản này kỷ niệm một giai đoạn thập niên '70 áp dụng chương trình vé tháng tàu hỏa độc đáo cho phép các nhà phiêu lưu trên khắp thế giới khám phá 21 quốc gia châu Âu. Đôi giày classic thoải mái này giúp bạn chinh phục hành trình phiêu lưu sắp tới của riêng mình đầy phong cách.
+
+Details: Dáng regular fit
+Có dây giày
+Thân giày bằng da
+Lớp lót bằng vải dệt
+Đế ngoài bằng cao su

@@ -1,0 +1,128 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .banner img {
+  margin-top: 50px;
+  height: 450px;
+}
+main .logo-brand {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+main .logo-brand img {
+  margin-left: 10px;
+  height: 80px;
+  height: 80px;
+  width: 138.97px;
+}
+main .homepage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .homepage .brand {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+main .homepage .brand img {
+  height: 80px;
+}
+main .homepage .brand .shoeDisplay {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+main .homepage .brand .shoeDisplay .shoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main .homepage .brand .shoeDisplay .shoes .imgContain {
+  position: relative;
+}
+main .homepage .brand .shoeDisplay .shoes .imgContain .img2 {
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+}
+main .homepage .brand .shoeDisplay .shoes .imgContain .img1 {
+  transition: 0.25s ease-in;
+}
+main .homepage .brand .shoeDisplay .shoes .imgContain .img1:hover {
+  opacity: 0;
+}
+main .homepage .brand .shoeDisplay .shoes img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+main .homepage .brand .shoeDisplay .shoes h4 {
+  margin-top: 5px;
+}
+
+.shoeDisplay {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.shoeDisplay .shoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.shoeDisplay .shoes .imgContain {
+  position: relative;
+}
+.shoeDisplay .shoes .imgContain i {
+  position: absolute;
+  right: 0;
+  margin: 10px;
+  font-size: 20px;
+  z-index: 3;
+}
+.shoeDisplay .shoes .imgContain .img2 {
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+}
+.shoeDisplay .shoes .imgContain .img1 {
+  transition: 0.25s ease-in;
+}
+.shoeDisplay .shoes .imgContain .img1:hover {
+  opacity: 0;
+}
+.shoeDisplay .shoes img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+.shoeDisplay .shoes h4 {
+  margin-bottom: 5px;
+}/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,28 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+main .content .acc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .content .acc p {
+  font-weight: 700;
+  width: 200px;
+}
+main .content .acc .stg {
+  width: 370px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .content .acc .stg .edit {
+  width: auto;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}/*# sourceMappingURL=account.css.map */

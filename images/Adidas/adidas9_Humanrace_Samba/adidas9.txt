@@ -1,0 +1,16 @@
+name: Adidas Humanrace Samba
+
+Color: Hồng, đen
+
+Category: originals
+
+Price: 5.000.000đ
+
+info:Pharrell Williams trung thành với di sản adidas và nâng cấp đôi giày Samba kinh điển. Là phiên bản nâng cấp nhất của kiểu dáng biểu tượng tính đến nay, đôi giày Humanrace Samba được thiết kế với tay nghề chế tác tinh xảo và chất liệu siêu cao cấp với cách phối tiệp màu — tất cả đều mang dấu ấn rõ ràng về cội nguồn bóng đá của Samba. Đôi giày này cũng có một số điểm đáng chú ý khác hẳn so với mẫu giày Samba truyền thống, bao gồm thân giày bằng da cao cấp, bên cạnh mũi giày, lớp lót bằng da và dây giày bằng da.
+
+details:Dáng regular fit
+Dây giày bằng da
+Thân giày bằng da ECCO
+Lưỡi gà bằng da
+Lớp lót bằng da
+Đế ngoài bằng cao su

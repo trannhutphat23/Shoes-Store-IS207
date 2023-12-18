@@ -1,0 +1,357 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.nav-slide {
+  width: 100%;
+  height: 350px;
+  background-color: #ebe9e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  z-index: 3;
+}
+.nav-slide .nav-access {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+.nav-slide .nav-access .search {
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 120px;
+}
+.nav-slide .nav-access .search .input {
+  display: block;
+  width: 70%;
+  height: 30px;
+  padding: 2px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  border: 1px solid rgb(187, 187, 187);
+}
+.nav-slide .nav-access .search .input:focus {
+  border: 1px solid black;
+}
+.nav-slide .nav-access .search .input:focus + button {
+  color: red;
+}
+.nav-slide .nav-access .search button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  position: absolute;
+  z-index: 2;
+}
+.nav-slide .nav-access .search button i {
+  margin-right: 5px;
+}
+.nav-slide .nav-access .other {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-slide .nav-access .other i {
+  cursor: pointer;
+}
+.nav-slide .nav-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.nav-slide .nav-brand a {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.3;
+}
+.nav-slide .nav-brand a:hover {
+  background-color: black;
+  color: white;
+}
+
+header nav .nav-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F5F5F5;
+}
+header nav .nav-head .userAccount {
+  z-index: 3;
+}
+header nav .nav-head h1 {
+  margin-left: 70px;
+}
+header nav .nav-head a {
+  text-decoration: none;
+  color: black;
+}
+@media screen and (max-width: 800px) {
+  header nav .nav-head .unsign {
+    display: none !important;
+  }
+  header nav .nav-head .navunsign {
+    display: block !important;
+  }
+}
+header nav .nav-head .navunsign {
+  font-size: 25px;
+  cursor: pointer;
+  padding-right: 30px;
+  display: none;
+  transition: 0.2s;
+}
+header nav .nav-head .navunsign:hover {
+  color: red;
+}
+header nav .nav-head .unsign {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 70px;
+}
+header nav .nav-head .unsign hr {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+header nav .nav-head .unsign p {
+  cursor: pointer;
+}
+header nav .nav-head .unsign p:hover {
+  color: red;
+}
+header nav .nav-head .unsign .userMenu {
+  position: absolute;
+  background-color: white;
+  height: auto;
+  width: 120px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
+}
+header nav .nav-head .unsign .userMenu i {
+  color: white;
+}
+header nav .nav-head .unsign .userMenu p {
+  padding-top: 15px;
+  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .nav-head .unsign .userMenu p:hover {
+  color: green;
+}
+header nav .nav-bottom {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
+}
+header nav .nav-bottom ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .nav-bottom ul .nav-responsive .brand-selection {
+  width: 70%;
+}
+header nav .nav-bottom ul .nav-responsive .search {
+  width: 20%;
+}
+header nav .nav-bottom ul .nav-responsive .other {
+  width: 10%;
+}
+header nav .nav-bottom ul .nav-responsive .navmenu-responsive {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+header nav .nav-bottom ul li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .nav-bottom ul li .sp-cart:hover {
+  border-bottom: 2px solid white;
+}
+header nav .nav-bottom ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+header nav .nav-bottom ul li:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+header nav .nav-bottom ul li:nth-child(4) {
+  display: flex;
+  justify-content: flex-start;
+}
+header nav .nav-bottom ul li:nth-child(4) i {
+  margin-right: 30px;
+}
+header nav .nav-bottom ul a {
+  height: 100%;
+  border-bottom: 2px solid transparent;
+}
+header nav .nav-bottom ul a:hover {
+  border-bottom: 2px solid black;
+}
+header nav .nav-bottom ul i {
+  cursor: pointer;
+}
+header nav .nav-bottom ul .brand-selection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 1000px) {
+  header nav .nav-bottom ul .nav-responsive {
+    padding-right: 20px;
+    justify-content: flex-end;
+  }
+  header nav .nav-bottom ul .nav-responsive .brand-selection {
+    display: none;
+  }
+  header nav .nav-bottom ul .nav-responsive .search {
+    display: none;
+  }
+  header nav .nav-bottom ul .nav-responsive .other {
+    display: none;
+  }
+  header nav .nav-bottom ul .nav-responsive .navmenu-responsive {
+    display: block;
+  }
+}
+header nav .nav-bottom ul .other {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header nav .nav-bottom ul .search {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+header nav .nav-bottom ul .search .input {
+  display: block;
+  width: 100%;
+  padding: 2px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #cdcaca;
+}
+header nav .nav-bottom ul .search .input:focus {
+  border: 1px solid black;
+}
+header nav .nav-bottom ul .search .input:focus + button {
+  color: red;
+}
+header nav .nav-bottom ul .search button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  position: absolute;
+  z-index: 2;
+}
+header nav .nav-bottom ul .search button i {
+  margin-right: 5px;
+}
+
+body {
+  height: 100%;
+}
+
+#display {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  width: 100%;
+}
+#display iframe {
+  display: block;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  height: 300px;
+  background-color: black;
+}
+footer ul {
+  padding-top: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer ul li {
+  display: flex;
+  flex-direction: column;
+}
+footer ul li p {
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+footer ul li p:hover {
+  color: aqua;
+}
+footer ul li h3 {
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+footer ul li i {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+footer ul li i:hover {
+  color: aqua;
+}
+
+.hidden {
+  display: none !important;
+}/*# sourceMappingURL=style.css.map */

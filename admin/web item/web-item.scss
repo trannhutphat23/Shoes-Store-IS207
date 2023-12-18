@@ -1,0 +1,468 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding-top: 20px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//------------------------------ all item --------------------------------------- //
+.all-item-container {
+  width: 95%;
+  height: 95%;
+  height: auto;
+  background-color: white;
+  border: 2px solid #9e9ea0;
+  padding: 20px;
+
+  // ---------- title h1 -----------------
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  // ---------------- brand button -----------
+  .brand-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    img {
+      height: 100px;
+      padding: 10px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .clicked-border {
+      border: 2px solid #111;
+      background-color: white;
+    }
+  }
+
+  // --------------------- advance button ----------------
+  .advance {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 30px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    // ----------- search --------------
+    .search {
+      width: 20%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      margin-right: 50px;
+      input {
+        border: 1px solid #111;
+        outline: none;
+        height: 30px;
+        width: 100%;
+        padding-left: 10px;
+        border-radius: 5px;
+      }
+      i {
+        position: absolute;
+        right: 5px;
+      }
+    }
+
+    // ----------- sort ----------------
+    .sort {
+      width: 15%;
+      height: auto;
+      position: relative;
+      background-color: white;
+      .sort-button {
+        width: 100%;
+        border: 1px solid #9e9ea0;
+        height: 30px;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.2s;
+        &:hover {
+          background-color: #ebe9e9;
+        }
+        p {
+          width: 80%;
+          text-align: center;
+        }
+      }
+      // ------------- sort dropdown -------------------
+      .sort-option {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        border: 1px solid #9e9ea0;
+        border-top: none;
+        list-style-type: none;
+        height: auto;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.2s;
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+          height: 30px;
+          cursor: pointer;
+          p {
+            width: 70%;
+            text-align: center;
+          }
+          i {
+            font-size: 20px;
+          }
+          &:hover {
+            background-color: #9e9ea0;
+          }
+        }
+      }
+    }
+  }
+
+  // -------------------- item display ----------------------
+  .item-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    // ------------ item ----------------
+    .item {
+      height: 280px;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid #e3e3e3;
+      box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
+      &:hover {
+        border: 1px solid #111;
+      }
+      img {
+        height: 200px;
+        border: 1px solid #9e9ea0;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// ------------------------------ add item -------------------------------------- //
+.add-item-container {
+  width: 95%;
+  height: 95%;
+  height: auto;
+  background-color: white;
+  border: 2px solid #9e9ea0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  //------------------------- add image --------------------------------
+  .add-img-file {
+    margin-bottom: 20px;
+    .add-box {
+      margin-bottom: 10px;
+      p {
+        font-weight: 700;
+        font-size: 20px;
+        b {
+          color: red;
+        }
+      }
+    }
+  }
+  .image-container {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    aside {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      p {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        font-weight: 700;
+      }
+      img {
+        height: 100px;
+        margin-bottom: 10px;
+        border: 1px solid #e3e3e3;
+        cursor: pointer;
+      }
+    }
+    .preview-img {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+      p {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .main-img {
+        height: 300px;
+        cursor: pointer;
+        border: 1px solid #111;
+      }
+    }
+  }
+  // -------------------- item detail -----------------------------
+  .item-detail-container {
+    margin: 5px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .input-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 80%;
+      margin-bottom: 20px;
+      padding-left: 10px;
+      p {
+        font-size: 16px;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: 500;
+        b {
+          color: red;
+        }
+      }
+      input,
+      select {
+        width: 100%;
+        height: 25px;
+        padding-left: 10px;
+        border: 1px solid #111;
+        outline: none;
+        border-radius: 5px;
+      }
+      textarea {
+        width: 100%;
+        height: 40px;
+        padding-top: 5px;
+        padding-left: 10px;
+        border: 1px solid #111;
+        border-radius: 5px;
+        outline: none;
+      }
+    }
+    button {
+      width: 50%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #111;
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.2s;
+      background-color: white;
+      p {
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+        font-size: 18px;
+      }
+      &:hover {
+        background-color: #111;
+        p {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------ item view -------------------------------------- //
+.item-view-container {
+  width: 95%;
+  height: 95%;
+  height: auto;
+  background-color: white;
+  border: 2px solid #9e9ea0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  .item-side-image {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    aside {
+      display: flex;
+      flex-direction: column;
+      img {
+        height: 100px;
+        margin-bottom: 10px;
+        border: 1px solid #e3e3e3;
+        cursor: pointer;
+      }
+    }
+    .main-img {
+      height: 400px;
+      cursor: pointer;
+      border: 1px solid #111;
+    }
+  }
+  .item-detail-container {
+    margin: 5px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .input-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 80%;
+      margin-bottom: 20px;
+      padding-left: 10px;
+      p {
+        font-size: 16px;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: 500;
+        position: relative;
+        b {
+          color: red;
+        }
+        strong {
+          text-decoration: underline;
+          cursor: pointer;
+          position: absolute;
+          right: 10px;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+      input,
+      select {
+        width: 100%;
+        height: 25px;
+        padding-left: 10px;
+        border: 1px solid #111;
+        outline: none;
+        border-radius: 5px;
+      }
+      textarea {
+        width: 100%;
+        height: 40px;
+        padding-top: 5px;
+        padding-left: 10px;
+        border: 1px solid #111;
+        border-radius: 5px;
+        outline: none;
+      }
+    }
+    .button-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      .save {
+        &:hover {
+          background-color: #0066ff;
+          p {
+            color: white;
+          }
+        }
+      }
+      .delete {
+        &:hover {
+          background-color: #ff0000;
+          p {
+            color: white;
+          }
+        }
+      }
+      button {
+        width: 40%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #111;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 0.2s;
+        background-color: white;
+        p {
+          margin: 0;
+          padding: 0;
+          font-weight: 700;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

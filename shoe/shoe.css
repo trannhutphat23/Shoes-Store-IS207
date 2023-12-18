@@ -1,0 +1,117 @@
+.shoe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.shoe .shoeImg {
+  display: flex;
+  flex-direction: row;
+}
+.shoe .shoeImg img {
+  width: 450px;
+  width: 450px;
+}
+.shoe .shoeImg aside {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.shoe .shoeImg aside img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.shoe .shoeImg aside .chose {
+  border: 1px solid black;
+}
+.shoe .shoeDetail {
+  width: 45%;
+}
+.shoe .shoeDetail h3 {
+  margin-bottom: 10px;
+}
+.shoe .shoeDetail ul {
+  list-style-type: none;
+}
+.shoe .shoeDetail ul li {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.shoe .shoeDetail ul li input {
+  font-size: 17px;
+  width: 116px;
+  text-align: center;
+  height: 27px;
+  border: 1px solid black;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+.shoe .shoeDetail ul li input:focus {
+  outline: none;
+}
+.shoe .shoeDetail ul li select {
+  font-size: 17px;
+  width: 170px;
+  text-align: center;
+}
+.shoe .shoeDetail ul li i {
+  cursor: pointer;
+  color: red;
+}
+.shoe .shoeDetail ul .quantityButton {
+  width: 170px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.shoe .shoeDetail ul .quantityButton input::-webkit-outer-spin-button,
+.shoe .shoeDetail ul .quantityButton input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.shoe .shoeDetail ul .quantityButton input {
+  margin-bottom: 25px;
+}
+.shoe .shoeDetail ul .quantityButton button {
+  margin-bottom: 25px;
+  height: 27px;
+  width: 27px;
+  border-radius: 0px;
+  background-color: white;
+}
+.shoe .shoeDetail ul .quantityButton button:first-child {
+  border: 1px solid black;
+  border-right: 1px solid white;
+}
+.shoe .shoeDetail ul .quantityButton button:last-child {
+  border: 1px solid black;
+  border-left: 1px solid white;
+}
+.shoe .shoeDetail ul .quantityButton button i {
+  color: black;
+}
+.shoe .shoeDetail ul .decription p {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: justify;
+}
+.shoe .shoeDetail ul .shoeButton {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.shoe .shoeDetail ul .shoeButton i {
+  font-size: 30px;
+}
+.shoe .shoeDetail ul .shoeButton button p {
+  font-size: 15px;
+}/*# sourceMappingURL=shoe.css.map */
