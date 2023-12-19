@@ -88,7 +88,7 @@
               break;
           }
       }else{
-        // Check arrange item list
+        // Check sort item list
         if (isset($_GET['opt'])){
           $option = $_GET['opt'];
           switch($option){

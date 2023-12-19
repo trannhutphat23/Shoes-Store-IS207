@@ -24,25 +24,6 @@
       <h1>webbangiay</h1>
     </div>
     <ul class="nav">
-      <!-- Dashboard -->
-      <li>
-        <div class="tag-title" onclick="ShowDropdown(this)">
-          <i class="fa-solid fa-chart-line"></i>
-          <p>Dashboard</p>
-          <i class="fa-solid fa-caret-down"></i>
-        </div>
-        <ol class="hidden">
-          <li>
-            <i class="fa-solid fa-plus"></i>
-            <p>Doanh thu</p>
-          </li>
-          <li>
-            <i class="fa-solid fa-plus"></i>
-            <p>Thống kê</p>
-          </li>
-        </ol>
-      </li>
-
       <!-- Sản phẩm -->
       <li>
         <div class="tag-title" onclick="ShowDropdown(this)">
@@ -89,7 +70,7 @@
       </li>
 
       <!-- Khách hàng -->
-      <li onclick="routerPage('./customer/customer.html')">
+      <li onclick="routerPage('./customer/customer.php')">
         <div class="tag-title" onclick="ShowDropdown(this)">
           <i class="fa-solid fa-user"></i>
           <p>Khách hàng</p>
@@ -102,7 +83,7 @@
 
   <!-- main -->
   <main>
-    <iframe src="./customer/customer.html" id="frame"> </iframe>
+    <iframe src="./customer/customer.php" id="frame"> </iframe>
   </main>
 </body>
 <script src="./admin.js"></script>

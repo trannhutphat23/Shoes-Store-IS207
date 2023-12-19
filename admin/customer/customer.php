@@ -1,3 +1,7 @@
+<?php
+  require "../../connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,28 +35,37 @@
         <thead>
           <tr>
             <th style="width: 8%">STT<i class="fa-solid fa-sort"></i></th>
-            <th style="width: 12%">Mã đơn<i class="fa-solid fa-sort"></i></th>
+            <th style="width: 12%">Tên<i class="fa-solid fa-sort"></i></th>
             <th style="width: 15%">
               Số điện thoại<i class="fa-solid fa-sort"></i>
             </th>
-            <th style="width: 35%">Đơn hàng<i class="fa-solid fa-sort"></i></th>
+            <th style="width: 25%">Email<i class="fa-solid fa-sort"></i></th>
             <th style="width: 20%">
-              Tổng cộng<i class="fa-solid fa-sort"></i>
+              Địa chỉ<i class="fa-solid fa-sort"></i>
             </th>
-            <th style="width: 10%"></th>
+            <th style="width: 20%">Ngày sinh<i class="fa-solid fa-sort"></i></th>
           </tr>
         </thead>
         <tbody>
-          <tr onclick="GoToCustomerDetail()">
-            <td><p>1</p></td>
-            <td><p>ID0419</p></td>
-            <td><p>0999888777</p></td>
-            <td>
-              <p>NIKE DUNK RETRO</p>
-            </td>
-            <td><p>9,000,000 VNĐ</p></td>
-            <td></td>
-          </tr>
+          <?php
+            $i=0;
+            $query = mysqli_query($conn, "SELECT * FROM khachhang");
+            while ($rowData = mysqli_fetch_assoc($query)) {
+              $i++;
+          ?>
+            <tr onclick="GoToCustomerDetail()">
+              <td><p><?php echo $i?></p></td>
+              <td><p><?php echo $rowData['TEN']?></p></td>
+              <td><p><?php echo $rowData['SDT']?></p></td>
+              <td>
+                <p><?php echo $rowData['EMAIL']?></p>
+              </td>
+              <td><p><?php echo $rowData['DIACHI']?></p></td>
+              <td><p><?php echo $rowData['NGAYSINH']?></p></td>
+            </tr>
+          <?php
+            }
+          ?>
         </tbody>
       </table>
     </div>
