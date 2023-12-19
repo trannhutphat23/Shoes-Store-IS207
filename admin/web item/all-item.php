@@ -1,6 +1,6 @@
 <?php
   require "../../connect.php";
-  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,19 +47,19 @@
           <i class="fa-solid fa-sort"></i>
         </div>
         <ul class="sort-option">
-          <li onclick="getOption(this)">
+          <li onclick="getOption(this)" id="opt1">
             <i class="fa-solid fa-arrow-down-a-z"></i>
             <p>A - Z</p>
           </li>
-          <li onclick="getOption(this)">
+          <li onclick="getOption(this)" id="opt2">
             <i class="fa-solid fa-arrow-down-z-a"></i>
             <p>Z -A</p>
           </li>
-          <li onclick="getOption(this)">
+          <li onclick="getOption(this)" id="opt3">
             <i class="fa-solid fa-arrow-down-wide-short"></i>
             <p>Giá giảm dần</p>
           </li>
-          <li onclick="getOption(this)">
+          <li onclick="getOption(this)" id="opt4">
             <i class="fa-solid fa-arrow-up-wide-short"></i>
             <p>Giá tăng dần</p>
           </li>
@@ -70,11 +70,52 @@
     <!-- item container -->
     <div class="item-container">
       <?php
-      if (isset($_GET['search'])) {
-        $searchVal = $_GET['search'];
-        $query = mysqli_query($conn, "SELECT * FROM giay WHERE MAGIAY LIKE '%$searchVal%'");
+      if (isset($_GET['opt']) && isset($_GET['search'])){
+          $option = $_GET['opt'];
+          $searchVal = $_GET['search'];
+          switch($option){
+            case 1:
+              $query = mysqli_query($conn, "SELECT * FROM giay WHERE MAGIAY LIKE '%$searchVal%' ORDER BY MAGIAY ASC");
+              break;
+            case 2:
+              $query = mysqli_query($conn, "SELECT * FROM giay WHERE MAGIAY LIKE '%$searchVal%' ORDER BY MAGIAY DESC");
+              break;
+            case 3:
+              $query = mysqli_query($conn, "SELECT * FROM giay WHERE MAGIAY LIKE '%$searchVal%' ORDER BY GIA DESC");
+              break;
+            case 4:
+              $query = mysqli_query($conn, "SELECT * FROM giay WHERE MAGIAY LIKE '%$searchVal%' ORDER BY GIA ASC");
+              break;
+          }
       }else{
-        $query = mysqli_query($conn, "SELECT * FROM giay");
+        // Check arrange item list
+        if (isset($_GET['opt'])){
+          $option = $_GET['opt'];
+          switch($option){
+            case 1:
+              $query = mysqli_query($conn, "SELECT * FROM giay ORDER BY MAGIAY ASC");
+              break;
+            case 2:
+              $query = mysqli_query($conn, "SELECT * FROM giay ORDER BY MAGIAY DESC");
+              break;
+            case 3:
+              $query = mysqli_query($conn, "SELECT * FROM giay ORDER BY GIA DESC");
+              break;
+            case 4:
+              $query = mysqli_query($conn, "SELECT * FROM giay ORDER BY GIA ASC");
+              break;
+          }
+        }else{
+          $query = mysqli_query($conn, "SELECT * FROM giay");
+        }
+  
+        // Check searct item list
+        if (isset($_GET['search'])) {
+          $searchVal = $_GET['search'];
+          $query = mysqli_query($conn, "SELECT * FROM giay WHERE MAGIAY LIKE '%$searchVal%'");
+        }else{
+          $query = mysqli_query($conn, "SELECT * FROM giay");
+        }
       }
       while ($rowData = mysqli_fetch_assoc($query)) {
         $arrImg = explode("|", $rowData['HINHANH']);

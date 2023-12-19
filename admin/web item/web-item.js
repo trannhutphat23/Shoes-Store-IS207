@@ -12,7 +12,6 @@ function showSortOption() {
 
 function getOption(element) {
     var optionText = $(element).find('p').text();
-    console.log(optionText);
     $('.button-text').text(optionText);
     $(".sort-option").hide();
 }
@@ -27,6 +26,9 @@ function Edit(element) {
     // Toggle the disabled attribute
     if (inputElement.disabled)
         inputElement.disabled = !inputElement.disabled;
+    else{
+        inputElement.disabled = !inputElement.disabled;
+    }
 }
 
 function Save() {
@@ -124,5 +126,19 @@ $(document).ready(function(){
                 window.location.href = "all-item.php?search=" + data;
             }
         })
+    })
+
+
+    $("#opt1").click(function(){
+        window.location.href = "all-item.php?opt=1";
+    })
+    $("#opt2").click(function(){
+        window.location.href = "all-item.php?opt=2";
+    })
+    $("#opt3").click(function(){
+        window.location.href = "all-item.php?opt=3";
+    })
+    $("#opt4").click(function(){
+        window.location.href = "all-item.php?opt=4";
     })
 })
