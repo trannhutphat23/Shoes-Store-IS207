@@ -112,3 +112,17 @@ function uploadImages() {
         alert('Hãy chọn 4 ảnh');
     }
 }
+
+$(document).ready(function(){
+    $(".fa-magnifying-glass").click(function(){
+        var searchVal =  $('input[type="text"]').val();
+        $.ajax({
+            type: "POST",
+            url: "search.php",
+            data: {searchVal: searchVal},
+            success: function(data){
+                window.location.href = "all-item.php?search=" + data;
+            }
+        })
+    })
+})
