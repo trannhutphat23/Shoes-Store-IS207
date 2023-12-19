@@ -88,7 +88,7 @@ function uploadImages() {
         return;
     }
 
-    if (input.files && input.files.length == 4) {
+    if (input.files && input.files.length == 3) {
         for (var i = 0; i < input.files.length; i++) {
             var reader = new FileReader();
             var file = input.files[i];
