@@ -13,62 +13,12 @@
 </head>
 
 <body>
-  <script>
-    $(document).ready(function() {
-      $("#clickBtn").click(function() {
-        var fileInput = $('#imageInputAside')[0];
-        var files = fileInput.files;
-        var fileNames = [];
-
-        for (var i = 0; i < files.length; i++) {
-          fileNames.push(files[i].name);
-        }
-        var imagePathSide1 = fileNames[0];
-        var imagePathSide2 = fileNames[1];
-        var imagePathSide3 = fileNames[2];
-        var imagePathMain = $('#imageInputMain').val();
-        var productName = $('input[name="name"]').val();
-        var productColor = $('input[name="color"]').val();
-        var productType = $('input[name="type"]').val();
-        var productPrice = $('input[name="price"]').val();
-        productPrice = parseFloat(productPrice);
-        var brandName = $('select').val();
-        var info = $('textarea').val();
-        var fileMainName = imagePathMain.split('\\').pop().split('/').pop();
-
-        if (productName == "" || productColor == "" || productType == "" || productPrice == "" || info == "" || fileMainName == "" || imagePathSide1 == "" || imagePathSide2 == "" || imagePathSide3 == "") {
-          alert("Hãy nhập đầy đủ thông tin");
-        } else {
-          if (!/^\d+$/.test(productPrice)) {
-            alert("Giá tiền không được chứa chữ");
-          }
-          if (/\d/.test(productColor)) {
-            alert("Màu không thể là số");
-          } else {
-            $.ajax({
-              type: "POST",
-              url: "insert_item.php",
-              data: {
-                productName: productName,
-                productColor: productColor,
-                productType: productType,
-                productPrice: productPrice,
-                info: info,
-                fileMainName: fileMainName,
-                imagePathSide1: imagePathSide1,
-                imagePathSide2: imagePathSide2,
-                imagePathSide3: imagePathSide3,
-                brandName: brandName
-              },
-              success: function(data) {
-                alert(data);
-              }
-            })
-          }
-        }
-      })
-    })
-  </script>
+  <style>
+    input[type="submit"]:hover {
+      background-color: #bbbfbc;
+      cursor: pointer;
+    }
+  </style>
   <form class="add-item-container" id="uploadForm" enctype="multipart/form-data" action="insert_item.php" method="post">
     <!-- image container -->
     <!-- <form id="uploadForm" enctype="multipart/form-data" action="add-item.php" method="post"> -->
@@ -131,12 +81,9 @@
         <p>Thông tin liên quan<b>*</b> :</p>
         <textarea placeholder="Thông tin liên quan" name="related_info" required></textarea>
       </div>
-      <input type="submit" value="Thêm sản phẩm" name="submit">
+      <input style="padding: 10px 20px; font-weight: bold" type="submit" value="Thêm sản phẩm" name="submit">
     </div>
   </form>
-  <!-- <button>
-      <p id="clickBtn">THÊM SẢN PHẨM</p>
-    </button> -->
 </body>
 <script src="web-item.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
