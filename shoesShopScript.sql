@@ -423,7 +423,7 @@ INSERT INTO `giohang` (`SDT`, `MAGIAY`, `SOLUONG`, `KICH_THUOC`, `GIATIEN`, `KIE
 ('0393379159', 'Air Jordan 1 Mid Blue', 2, 35, 3669000, 0),
 ('0393379159', 'ADIDAS HUMANRACE SAMBA ĐEN', 5, 35, 25000000, 0),
 ('0393379159', 'ADIDAS DURAMO SPEED TRẮNG', 2, 35, 2500000, 0),
-('123457', 'VANS CLASSIC SK8-HI', 1, 35, 1950000, 0),
+('123457', 'VANS CLASSIC SK8-HI', 1, 35, 1950000, 0);
 
 -- --------------------------------------------------------
 
