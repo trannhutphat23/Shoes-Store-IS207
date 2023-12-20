@@ -120,7 +120,7 @@
       while ($rowData = mysqli_fetch_assoc($query)) {
         $arrImg = explode("|", $rowData['HINHANH']);
       ?>
-        <div style="height: 290px" class="item" onclick="GoToItemDetail('<?php echo $conn->real_escape_string($rowData['MAGIAY']) ?>')">
+        <div style="height: 290px; margin-bottom: 20px" class="item" onclick="GoToItemDetail('<?php echo $conn->real_escape_string($rowData['MAGIAY']) ?>')">
           <img style="width: 214px" src="../../images/<?php echo $arrImg[0] ?>" alt="shoe" />
           <p style="width: 214px; height: 50px" class="shoe-title"><?php echo $rowData['MAGIAY'] ?></p>
           <p class="shoe-price"><?php echo number_format($rowData['GIA']) ?> VNĐ</p>

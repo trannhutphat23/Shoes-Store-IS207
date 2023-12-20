@@ -17,6 +17,7 @@
       href="../../fontawesome-free-6.3.0-web/fontawsome/css/all.min.css"
     />
     <link rel="stylesheet" href="./order.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -52,7 +53,7 @@
             while ($rowData = mysqli_fetch_assoc($query)) {
               $i++;
           ?>
-            <tr onclick="GoToOrderDetail()">
+            <tr>
               <td><p><?php echo $i?></p></td>
               <td><p><?php echo $rowData['MADON']?></p></td>
               <td><p><?php echo $rowData['SDT']?></p></td>
@@ -66,7 +67,7 @@
               </td>
               <td><p><?php echo number_format($rowData['TONG'])?> VNĐ</p></td>
               <td>
-                <button>
+                <button class="delBtn" id="isprocessed" value=<?php echo $rowData['MADON']?>>
                   <p>Xóa</p>
                 </button>
               </td>
