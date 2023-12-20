@@ -180,10 +180,8 @@ if (isset($_SESSION['username']) && isset($_COOKIE['checkSignin'])) {
         <h3>About us</h3>
         <p><a style="text-decoration: none; color:white" href="mailto:21520419@gm.uit.edu.vn">21520419@gm.uit.edu.vn</a></p>
         <p><a style="text-decoration: none; color:white" href="mailto:21520390@gm.uit.edu.vn">21520390@gm.uit.edu.vn</a></p>
-        <p><a style="text-decoration: none; color:white" href="mailto:21521129@gm.uit.edu.vn">21521129@gm.uit.edu.vn</a></p>
-        <p><a style="text-decoration: none; color:white" href="mailto:21522162@gm.uit.edu.vn">21522162@gm.uit.edu.vn</a></p>
-        <p><a style="text-decoration: none; color:white" href="mailto:21522346@gm.uit.edu.vn">21522346@gm.uit.edu.vn</a></p>
-        <p><a style="text-decoration: none; color:white" href="mailto:21520905@gm.uit.edu.vn">21520905@gm.uit.edu.vn</a></p>
+        <p><a style="text-decoration: none; color:white" href="mailto:21521129@gm.uit.edu.vn">20520724@gm.uit.edu.vn</a></p>
+        <p><a style="text-decoration: none; color:white" href="mailto:21522162@gm.uit.edu.vn">20520412@gm.uit.edu.vn</a></p>
       </li>
     </ul>
   </footer>

@@ -54,17 +54,13 @@
           <i class="fa-solid fa-caret-down"></i>
         </div>
         <ol class="hidden">
-          <li onclick="routerPage('./order/unprocess.html')">
+          <li onclick="routerPage('./order/unprocess.php')">
             <i class="fa-solid fa-plus"></i>
             <p>Chưa xử lí</p>
           </li>
-          <li onclick="routerPage('./order/processed.html')">
+          <li onclick="routerPage('./order/processed.php')">
             <i class="fa-solid fa-plus"></i>
             <p>Đã xử lí</p>
-          </li>
-          <li onclick="routerPage('./order/payed.html')">
-            <i class="fa-solid fa-plus"></i>
-            <p>Đã thanh toán</p>
           </li>
         </ol>
       </li>

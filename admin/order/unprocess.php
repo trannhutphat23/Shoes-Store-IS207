@@ -1,3 +1,6 @@
+<?php
+  require "../../connect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,37 +46,34 @@
           </tr>
         </thead>
         <tbody>
-          <tr onclick="GoToOrderDetail()">
-            <td><p>1</p></td>
-            <td><p>ID0419</p></td>
-            <td><p>0999888777</p></td>
-            <td>
-              <ol>
-                <li>
-                  <p>NIKE DUNK RETRO</p>
-                  <p>x 1</p>
-                </li>
-                <li>
-                  <p>NIKE DUNK RETRO</p>
-                  <p>x 1</p>
-                </li>
-                <li>
-                  <p>NIKE DUNK RETRO</p>
-                  <p>x 1</p>
-                </li>
-                <li>
-                  <p>NIKE DUNK RETRO</p>
-                  <p>x 1</p>
-                </li>
-              </ol>
-            </td>
-            <td><p>9,000,000 VNĐ</p></td>
-            <td>
-              <button>
-                <p>Đã xử lí</p>
-              </button>
-            </td>
-          </tr>
+          <?php
+            $i=0;
+            $query = mysqli_query($conn, "SELECT donhang.MADON AS MADON, donhang.SDT AS SDT, REPLACE(GROUP_CONCAT(DISTINCT TENGIAY), ',', '\n') as GIAY , REPLACE(GROUP_CONCAT(DISTINCT SOLUONG), ',', '\n') as SL, SUM(THANHTIEN) AS TONG FROM donhang, chitiet_donhang WHERE donhang.MADON = chitiet_donhang.MADON AND TINHTRANG = 'SHIPPING' GROUP BY donhang.MADON");
+            while ($rowData = mysqli_fetch_assoc($query)) {
+              $i++;
+          ?>
+            <tr onclick="GoToOrderDetail()">
+              <td><p><?php echo $i?></p></td>
+              <td><p><?php echo $rowData['MADON']?></p></td>
+              <td><p><?php echo $rowData['SDT']?></p></td>
+              <td>
+                <ol>
+                  <li>
+                    <p style="text-align: left; padding: 10px"><?php echo $rowData['GIAY']."\n"?></p>
+                    <p><?php echo $rowData['SL']."\n"?></p>
+                  </li>
+                </ol>
+              </td>
+              <td><p><?php echo number_format($rowData['TONG'])?> VNĐ</p></td>
+              <td>
+                <button>
+                  <p>Xóa</p>
+                </button>
+              </td>
+            </tr>
+          <?php
+            }
+          ?>
         </tbody>
       </table>
     </div>

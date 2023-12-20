@@ -1,3 +1,3 @@
 function GoToOrderDetail() {
-    window.location.href = './order-detail.html'
+    window.location.href = './order-detail.php'
 }
